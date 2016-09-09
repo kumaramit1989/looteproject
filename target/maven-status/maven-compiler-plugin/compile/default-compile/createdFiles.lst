@@ -1,0 +1,10 @@
+com\model\Login.class
+com\DAO\CategaoryDAO.class
+com\controler\CategoryController.class
+com\controler\LoginControler.class
+com\model\Category.class
+com\controler\ProductController.class
+com\controler\RegisterController.class
+com\model\Product.class
+com\model\Register.class
+com\DAO\ProductDAO.class
