@@ -8,8 +8,8 @@ public class Category
 {
 
 	@Id
-	@Column(name = "Category_Id")
 	@GeneratedValue
+	@Column(name = "Category_Id")
 	private int categoryId;
 	@Column(name="Category_Name")
 	private String categoryName;

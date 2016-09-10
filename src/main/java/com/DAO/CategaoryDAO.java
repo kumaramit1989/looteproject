@@ -10,6 +10,7 @@ import org.springframework.stereotype.Repository;
 
 import com.google.gson.Gson;
 import com.model.Category;
+import com.model.Supplier;
 
 @Repository
 public class CategaoryDAO {
@@ -40,7 +41,8 @@ public class CategaoryDAO {
 	}
 
 	// get category method
-	public String getCategory() {
+	public String getCategory()
+	{
 		Session con = sessionFactory.openSession();
 		Transaction tran = con.beginTransaction();
 		List catlist = con.createQuery("FROM Category").list();
@@ -76,6 +78,18 @@ public class CategaoryDAO {
 		con.update(Categoryobj);
 		tran.commit();
 		con.close();
+	}
+	
+	//to get the id of last record of table
+	public int fetchlastid()
+	{
+		Session con = sessionFactory.openSession();
+		List lastrec = con.createQuery("FROM Category order by categoryId desc LIMIT 1 ").list();
+		
+		Category lastid= (Category)lastrec.get(0); 
+	int lid= lastid.getCategoryId();
+			return lid;
+	
 	}
 
 }

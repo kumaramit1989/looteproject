@@ -28,6 +28,15 @@
     <div class="navbar-header">
       <a class="navbar-brand" href="./index.jsp">Lootle.com admin panel</a>
     </div>
+      <div class="navbar-header">
+					     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					        <span class="sr-only">Toggle navigation</span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+					      </button>
+		</div>
+		 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">	
     <ul class="nav navbar-nav">
       <li><a href="index.jsp"><span class="glyphicon glyphicon-home"></span> Home</a></li>
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Manage Orders <span class="caret"></span></a>
@@ -40,7 +49,7 @@
         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-tasks"></span> Manage Inventory <span class="caret"></span></a>
         <ul class="dropdown-menu">
         <li><a href="Category"><span class="glyphicon glyphicon-list-alt"></span> Manage category</a></li>
-          <li><a href="Product"><span class="glyphicon glyphicon-list-alt"></span> Manage Products</a></li>
+          <li><a href="showProduct"><span class="glyphicon glyphicon-list-alt"></span> Manage Products</a></li>
         </ul>
       </li>
        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span>Manage Users <span class="caret"></span></a>
@@ -60,9 +69,7 @@
       
      
     </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li></li>
-    </ul>
+    </div>
   </div>
 </nav>
  </div><!-- end of container area -->

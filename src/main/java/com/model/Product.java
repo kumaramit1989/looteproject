@@ -3,36 +3,37 @@ package com.model;
 import javax.persistence.*;
 
 
+
+@Entity
+@Table(name = "Producttbl")
 public class Product 
 {
-	private int productID;
+	@Id
+	@GeneratedValue
+	@Column(name="ProductId")
+	private int productId;
+	@Column(name="ProductName")
 	private String productName;
-	private String description;
-	private String image;
-	private float price;
-	private int quantity;
-	public Product(int productID, String productName, String description,String image, float price, int quantity) {
-		this.productID = productID;
-		this.productName = productName;
-		this.description = description;
-		this.price = price;
-		this.quantity = quantity;
-		this.image=image;
-	}
+	@Column(name="ProductDescription")
+	private String productDescription;
+	//private String image;
+	@Column(name="CategoryId")
+	private int categoryId;
+	@Column(name="SupplierId")
+	private int supplierId;
+	@Column(name="ProductPrice")
+	private float productPrice;
+	@Column(name="ProductStock")
+	private int productStock;
 	
-	public String getImage() {
-		return image;
+	public Product() {
+		
 	}
-
-	public void setImage(String image) {
-		this.image = image;
+	public int getProductId() {
+		return productId;
 	}
-
-	public int getProductID() {
-		return productID;
-	}
-	public void setProductID(int productID) {
-		this.productID = productID;
+	public void setProductId(int productId) {
+		this.productId = productId;
 	}
 	public String getProductName() {
 		return productName;
@@ -40,23 +41,35 @@ public class Product
 	public void setProductName(String productName) {
 		this.productName = productName;
 	}
-	public String getDescription() {
-		return description;
+	public String getProductDescription() {
+		return productDescription;
 	}
-	public void setDescription(String description) {
-		this.description = description;
+	public void setProductDescription(String productDescription) {
+		this.productDescription = productDescription;
 	}
-	public float getPrice() {
-		return price;
+	public int getCategoryId() {
+		return categoryId;
 	}
-	public void setPrice(float price) {
-		this.price = price;
+	public void setCategoryId(int categoryId) {
+		this.categoryId = categoryId;
 	}
-	public int getQuantity() {
-		return quantity;
+	public int getSupplierId() {
+		return supplierId;
 	}
-	public void setQuantity(int quantity) {
-		this.quantity = quantity;
+	public void setSupplierId(int supplierId) {
+		this.supplierId = supplierId;
+	}
+	public float getProductPrice() {
+		return productPrice;
+	}
+	public void setProductPrice(float productPrice) {
+		this.productPrice = productPrice;
+	}
+	public int getProductStock() {
+		return productStock;
+	}
+	public void setProductStock(int productStock) {
+		this.productStock = productStock;
 	}
 	
 	

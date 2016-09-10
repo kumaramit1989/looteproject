@@ -1,31 +1,41 @@
 package com.controler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
-import java.util.List;
+
+import com.DAO.CategaoryDAO;
 import com.DAO.ProductDAO;
+import com.DAO.SupplierDAO;
 import com.model.Product;
-import com.google.gson.Gson;
+
+
 @Controller
 public class ProductController 
 {
 	@Autowired
-	 ProductDAO objDAO;
-	@RequestMapping("/Product")
-	public String showproduct(Model m)
+	ProductDAO prodDAO;
+	@Autowired
+	CategaoryDAO catDAO;
+	@Autowired
+	SupplierDAO supDAO;
+	@RequestMapping(value = "/showProduct", method = RequestMethod.GET)
+	public ModelAndView  showSupplier() 
 	{
+		//int lid=prodDAO.fetchlastid();
+	//	lid++;
+		Product proobj=new Product();
+		//proobj.setSupplierId(lid);
+		ModelAndView mvc=new ModelAndView("ManageProduct","Product",proobj);
+		String Productgsonlist=prodDAO.getProduct();
+		String catlist=catDAO.getCategory();
+		String suplist=supDAO.getSupplier();
+		mvc.addObject("Productlist",Productgsonlist);
+		mvc.addObject("catlist",catlist);
+		mvc.addObject("suplist",suplist);
+		mvc.addObject("check",true);
 		
-
-		List<Product> li=objDAO.getProduct();
-				Gson gson = new Gson();
-       String jsonNames = gson.toJson(li);
-       // System.out.println("jsonNames = " + jsonNames);
-       m.addAttribute("proddt",jsonNames);
-        return "Product";
-       // return new ModelAndView("Product","li",li);
-
+		return mvc;
 	}
-
 }

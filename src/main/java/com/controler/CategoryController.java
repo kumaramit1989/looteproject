@@ -13,6 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.DAO.CategaoryDAO;
 import com.model.Category;
 import com.model.Register;
+import com.model.Supplier;
 @Controller
 public class CategoryController
 {
@@ -22,9 +23,12 @@ public class CategoryController
 	@RequestMapping(value = "/Category", method = RequestMethod.GET)
 	public ModelAndView  showcategaory() 
 	{
-	
+//		int lid=catDAO.fetchlastid();
+//		lid++;
+		Category catobj=new Category();
+	//	catobj.setCategoryId(lid);;
 		String catgsonlist=catDAO.getCategory();
-		ModelAndView mvc=new ModelAndView("ManageCategory","Category",new Category());
+		ModelAndView mvc=new ModelAndView("ManageCategory","Category",catobj);
 		mvc.addObject("clist",catgsonlist);
 		mvc.addObject("check",true);
 	    return mvc;	

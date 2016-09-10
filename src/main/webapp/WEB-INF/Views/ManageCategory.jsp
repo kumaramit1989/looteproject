@@ -18,10 +18,10 @@
 
 					<sf:form action="addCategory" method="post" commandName="Category">
 						<div class="row">
-							<div class="col-xs-3">
+						<div class="col-xs-3">
 								<div class="form-group">
-									<sf:label path="categoryId">Category Id</sf:label>
-									<sf:input readonly="true" path="categoryId"	class="form-control input-sm"></sf:input>
+									<sf:label path="categoryId">Category</sf:label>
+									<sf:input path="categoryId" readonly="true" class="form-control input-sm"></sf:input>
 								</div>
 							</div>
 							<div class="col-xs-3">
@@ -122,11 +122,13 @@
 
 			<div class="table-responsive">
 				<table id="mytable" class="table table-bordred table-striped">
+				<tr>
 					<th>Category Id</th>
 					<th>Category Name</th>
 					<th>Category Description</th>
 					<th>Update Category</th>
 					<th>Delete Category</th>
+					</tr>
 					<tr class="success"	ng-repeat="categoey in products|filter:seachproduct">
 						<td>{{categoey.categoryId}}</td>
 						<td>{{categoey.categoryName}}</td>

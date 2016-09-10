@@ -35,7 +35,16 @@
     <div class="navbar-header">
       <a class="navbar-brand" href="./index.jsp">Lootle.com</a>
     </div>
-    <ul class="nav navbar-nav">
+     <div class="navbar-header">
+					     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					        <span class="sr-only">Toggle navigation</span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+					      </button>
+		</div>
+		 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">			    
+    <ul class="nav navbar-nav" id="menu">
       <li><a href="index.jsp"><span class="glyphicon glyphicon-home"></span> Home</a></li>
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-th"></span> Category <span class="caret"></span></a>
         <ul class="dropdown-menu">
@@ -54,6 +63,7 @@
       <li><a href="AdminLogin"><span class="glyphicon glyphicon-user"></span> Admin Login</a></li>
       <li></li>
     </ul>
+    </div>
   </div>
 </nav>
  </div><!-- end of container area -->
