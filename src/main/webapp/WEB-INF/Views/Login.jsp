@@ -4,15 +4,16 @@
       <div class="modal-content">
           <div class="modal-header">
                  <h4 class="modal-title" id="myModalLabel">Login to lootle.com</h4>
+                 <h5 style="color:red;"></h5>
           </div>
           <div class="modal-body">
               <div class="row">
                   <div class="col-xs-6">
                       <div class="well">
-                          <form id="loginForm" method="POST" action="/login/" novalidate="novalidate">
+                          <form id="loginForm" method="POST" action="perform_login" novalidate="novalidate">
                               <div class="form-group">
                                   <label for="username" class="control-label">Username</label>
-                                  <input type="text" class="form-control" id="username" name="username" value="" required="" title="Please enter you username" placeholder="example@gmail.com">
+                                  <input type="text" class="form-control" id="username" name="username" value="" required="" title="Please enter you username" placeholder="user name">
                                   <span class="help-block"></span>
                               </div>
                               <div class="form-group">
@@ -28,21 +29,21 @@
                                   <p class="help-block">(if this is a private computer)</p>
                               </div>
                               <button type="submit" class="btn btn-success btn-block">Login</button>
-                              <a href="ResetPassword" class="btn btn-default btn-block">Help to login</a>
+                              <a href="resetpassword" class="btn btn-warning btn-block">Reset password</a>
                           </form>
                       </div>
                   </div>
                   <div class="col-xs-6">
-                      <p class="lead">Register now for <span class="text-success">FREE</span></p>
+                     	 <p class="lead">Register now</p>
                       <ul class="list-unstyled" style="line-height: 2">
-                          <li><span class="fa fa-check text-success"></span> See all your orders</li>
-                          <li><span class="fa fa-check text-success"></span> Fast re-order</li>
-                          <li><span class="fa fa-check text-success"></span> Save your favorites</li>
-                          <li><span class="fa fa-check text-success"></span> Fast checkout</li>
-                          <li><span class="fa fa-check text-success"></span> Get a gift <small>(only new customers)</small></li>
-                          <li><a href="/read-more/"><u>Read more</u></a></li>
+                          <li><span class="fa fa-check text-success glyphicon glyphicon-ok"></span> See all your orders</li>
+                          <li><span class="fa fa-check text-success glyphicon glyphicon-ok"></span> Fast re-order</li>
+                          <li><span class="fa fa-check text-success glyphicon glyphicon-ok"></span> Save your favorites</li>
+                          <li><span class="fa fa-check text-success glyphicon glyphicon-ok"></span> Fast checkout</li>
+                          <li><span class="fa fa-check text-success glyphicon glyphicon-ok"></span> Get a gift <small>(only new customers)</small></li>
                       </ul>
-                      <p><a href="Registration" class="btn btn-info btn-block">Yes please, register now!</a></p>
+                      <br><br>
+                      <p><a href="userRegistrationview" class="btn btn-success btn-block">Register now</a></p>
                   </div>
               </div>
           </div>

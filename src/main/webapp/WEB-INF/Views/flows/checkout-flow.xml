@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow xmlns="http://www.springframework.org/schema/webflow"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/webflow
+http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
+	<var name="order" class="com.model.Register" />
+		<var name="order" class="com.model.Cart" />
+		<var name="order" class="com.model.Order" />
+	
+	<view-state id="collectCustomerInfo" view="collectCustomerInfo.jsp"	model="Register">
+		<transition on="submit" to="Collectpayment" />
+	</view-state>
+<!--  	<view-state id="OrderConfirmation" view="OrderConfirmation.jsp"	model="Cart">
+		<transition on="edit" to="collectCustomerInfo" />
+		<transition on="submit" to="Collectpayment" />
+		
+	</view-state> -->
+	<view-state id="Collectpayment" view="Collectpayment.jsp" model="Order">
+		<transition on="edit" to="collectCustomerInfo" />
+		<transition on="submit" to="endState" />
+	</view-state>
+	<end-state id="endState" view="Thankyou.jsp"/>
+	<view-state id="invalidCartWarning">
+		<transition to="endState" />
+	</view-state>
+	<end-state id="cancelCheckout" view="checkOutCancelled.jsp" />
+	<global-transitions>
+		<transition on="cancel" to="cancelCheckout" />
+	</global-transitions>
+</flow>

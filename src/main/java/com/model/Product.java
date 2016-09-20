@@ -1,13 +1,21 @@
 package com.model;
 
+import java.io.Serializable;
+
 import javax.persistence.*;
+
+import org.springframework.web.multipart.MultipartFile;
 
 
 
 @Entity
 @Table(name = "Producttbl")
-public class Product 
+public class Product implements Serializable
 {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -2428134276649060612L;
 	@Id
 	@GeneratedValue
 	@Column(name="ProductId")
@@ -21,14 +29,28 @@ public class Product
 	private int categoryId;
 	@Column(name="SupplierId")
 	private int supplierId;
+	@Column(name="BrandName")
+	private String brandName;
 	@Column(name="ProductPrice")
 	private float productPrice;
 	@Column(name="ProductStock")
 	private int productStock;
-	
+	transient
+	private MultipartFile prodImage;
+
+
 	public Product() {
 		
 	}
+	
+	public String getBrandName() {
+		return brandName;
+	}
+
+	public void setBrandName(String brandName) {
+		this.brandName = brandName;
+	}
+
 	public int getProductId() {
 		return productId;
 	}
@@ -70,6 +92,14 @@ public class Product
 	}
 	public void setProductStock(int productStock) {
 		this.productStock = productStock;
+	}
+
+	public MultipartFile getProdImage() {
+		return prodImage;
+	}
+
+	public void setProdImage(MultipartFile prodImage) {
+		this.prodImage = prodImage;
 	}
 	
 	

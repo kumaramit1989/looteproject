@@ -3,6 +3,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -20,13 +23,21 @@
           <div class="col-xs-2 header-logo">
                    <a href="index.jsp"><img src="resources/img/logo.png" class="img-responsive logo"/></a>    	
         </div>
-        	<div class="col-xs-4 text-right pull-right">
-							<a href=""><i class="fa fa-facebook"></i></a>
-							<a href=""><i class="fa fa-twitter"></i></a>
-							<a href=""><i class="fa fa-skype"></i></a>
-							<a href=""><i class="fa fa-google-plus"></i></a>
-							<a href=""><i class="fa fa-linkedin"></i></a>								
-			</div>
+		  <div class="col-xs-2 header-logo">
+		  </div>
+		   <div class="col-xs-2 header-logo">
+		  </div>
+		   <div class="col-xs-2 header-logo">
+		  </div>
+		   <div class="col-xs-2 header-logo">
+		   <br><br><br>
+				<b>   ${sessionScope.user} </b>
+		  </div>
+		   <div class="col-xs-2 header-logo">
+		   <br>
+		  &nbsp;&nbsp;&nbsp;&nbsp; ${sessionScope.count} items
+		   <a href="showcart"><img src="resources/img/cart.gif" class="img-responsive logo"/></a>  
+		  </div>
         
   </div>
    
@@ -46,21 +57,20 @@
 		 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">			    
     <ul class="nav navbar-nav" id="menu">
       <li><a href="index.jsp"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-th"></span> Category <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="Product"><span class="glyphicon glyphicon-th"></span> Wrist Watch</a></li>
-          <li><a href="Product"><span class="glyphicon glyphicon-th"></span> Perfumes & Deodorants </a></li>
-        </ul>
-      </li>
+       <li><a href="showallProduct"><span class="glyphicon glyphicon-th-large"></span> All Products</a></li>
       <li><a href="ContactUs"><span class="glyphicon glyphicon-phone-alt"></span> Contact us</a></li>
       <li><a href="AboutUs"><span class="glyphicon glyphicon-list-alt"></span> About us</a></li>
-      
+       <li><a href="checkout">checkout test link</a></li>
      
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="Registration"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="Login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      <li><a href="AdminLogin"><span class="glyphicon glyphicon-user"></span> Admin Login</a></li>
+       <c:if test="${not sessionScope.UserLoggedIn}">
+    <li><a href="userRegistrationview"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+   	 <li><a href="Login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+  </c:if>
+   <c:if test="${sessionScope.UserLoggedIn}">  
+      <li><a href="perform_logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+        </c:if>
       <li></li>
     </ul>
     </div>

@@ -88,8 +88,10 @@ public class CategaoryDAO {
 		
 		Category lastid= (Category)lastrec.get(0); 
 	int lid= lastid.getCategoryId();
+	con.close();
 			return lid;
 	
 	}
 
+	
 }

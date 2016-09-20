@@ -84,6 +84,7 @@ public class SupplierDAO
 		List lastrec = con.createQuery("FROM Supplier order by supplierId desc LIMIT 1 ").list();
 		Supplier lastid= (Supplier)lastrec.get(0); 
 	int lid= lastid.getSupplierId();
+	con.close();
 			return lid;
 	
 	}

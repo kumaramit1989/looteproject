@@ -66,4 +66,54 @@
     </a>
   </div>
 </div>
+
+<div class="container">
+  
+    <div id="products" class="row list-group">
+        <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+          <a href="recenttenproducts"> <img class="group list-group-image" src="resources/img/na.jpg"/></a> 
+                <div class="caption">
+                    <h4 align="center" class="group inner list-group-item-heading">New arrivals</h4>
+                    <p align="center" class="group inner list-group-item-text">click here to view latest arrivals</p>
+                    <div align="center" class="row">
+                        <div align="center">
+                            <a class="btn btn-success" href="recenttenproducts">View Latest Products</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+            <a href="productscatwise?catidid=1"><img class="group list-group-image" src="resources/img/w.jpe" alt="" /></a> 
+                <div class="caption">
+                    <h4 align="center" class="group inner list-group-item-heading">Watches</h4>
+                    <p align="center" class="group inner list-group-item-text">click here to view all watches</p>
+                    <div align="center" class="row">
+                        <div align="center">
+                            <a class="btn btn-success" href="productscatwise?catidid=1">View all Watches</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+             <a href="productscatwise?catidid=2"> <img class="group list-group-image" src="resources/img/G.jpg" alt="" /></a>
+                <div class="caption">
+                    <h4 align="center" class="group inner list-group-item-heading">Deodorant and perfumes</h4>
+                    <p align="center" class="group inner list-group-item-text">click here to view Deodorant and perfumes</p>
+                    <div align="center" class="row">
+                        <div align="center">
+                            <a class="btn btn-success" href="productscatwise?catidid=2">Deodorant and perfumes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <%@include file="WEB-INF/Views/CommonFooter.jsp" %>

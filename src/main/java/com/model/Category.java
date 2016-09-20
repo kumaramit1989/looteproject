@@ -1,12 +1,18 @@
 package com.model;
 
+import java.io.Serializable;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "Categorytbl")
-public class Category
+public class Category implements Serializable
 {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5245910328239506006L;
 	@Id
 	@GeneratedValue
 	@Column(name = "Category_Id")

@@ -20,10 +20,10 @@ public class SupplierController
 	@RequestMapping(value = "/Supplierview", method = RequestMethod.GET)
 	public ModelAndView  showSupplier() 
 	{
-//		int lid=supDAO.fetchlastid();
-//		lid++;
+		int lid=supDAO.fetchlastid();
+		lid++;
 		Supplier supobj=new Supplier();
-		//supobj.setSupplierId(lid);
+		supobj.setSupplierId(lid);
 		ModelAndView mvc=new ModelAndView("ManageSupplier","Supplier",supobj);
 		String Suppliergsonlist=supDAO.getSupplier();
 		mvc.addObject("Supplierlist",Suppliergsonlist);
@@ -69,10 +69,7 @@ public class SupplierController
 	//updating supplier
 	@RequestMapping(value = "/updateSupplier",method=RequestMethod.POST)
 	public ModelAndView updateSupplier(Supplier Supplierobj) 
-	{
-		//System.out.println(Supplierobj.getSupplierId());
-		//System.out.println(Supplierobj.getSupplierName());
-		
+	{		
 		int supid=Supplierobj.getSupplierId();
 		supDAO.updateSupplier(Supplierobj, supid);
 		ModelAndView mvc=new ModelAndView("ManageSupplier","Supplier",new Supplier());

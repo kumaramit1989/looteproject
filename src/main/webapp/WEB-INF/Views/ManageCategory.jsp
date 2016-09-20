@@ -38,7 +38,7 @@
 							<div class="col-xs-3">
 								<div class="form-group">
 									<br>
-									<input type="submit" value="Add" class="btn btn-info btn-block">
+									<input type="submit" value="Add" class="btn btn-success btn-block">
 								</div>
 							</div>
 					</div>
@@ -83,7 +83,7 @@
 							<div class="col-xs-3">
 								<div class="form-group">
 								<br>
-									<input type="submit" value="Update" class="btn btn-info btn-block">
+									<input type="submit" value="Update" class="btn btn-success btn-block">
 								</div>
 							</div>
 								</div>
@@ -121,7 +121,7 @@
 			</div>
 
 			<div class="table-responsive">
-				<table id="mytable" class="table table-bordred table-striped">
+				<table id="mytable" class="table table-bordred table-striped table-hover">
 				<tr>
 					<th>Category Id</th>
 					<th>Category Name</th>
@@ -133,7 +133,7 @@
 						<td>{{categoey.categoryId}}</td>
 						<td>{{categoey.categoryName}}</td>
 						<td>{{categoey.categoryDecs}}</td>
-						<td><p data-placement="top" data-toggle="tooltip" title="Delete"><a data-title="Edit" class="btn btn-primary btn-xs" href="fetchCategorytoupdate?cid={{categoey.categoryId}}"> <span class="glyphicon glyphicon-pencil"></span></span></a></td>
+						<td><p data-placement="top" data-toggle="tooltip" title="Delete"><a data-title="Edit" class="btn btn-success btn-xs" href="fetchCategorytoupdate?cid={{categoey.categoryId}}"> <span class="glyphicon glyphicon-pencil"></span></span></a></td>
 						<td><p data-placement="top" data-toggle="tooltip" title="Delete"><a data-title="Edit" class="btn btn-danger btn-xs"	href="deletCategory?cid={{categoey.categoryId}}"> <span class="glyphicon glyphicon-trash"></span></a></td>
 					</tr>
 				</table>

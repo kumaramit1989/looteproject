@@ -19,14 +19,27 @@
  <div class="container-fluid"><!-- start of container area -->
   <div class="row">
           <div class="col-xs-2 header-logo">
-                   <a href="index.jsp"><img src="resources/img/logo.png" class="img-responsive logo"/></a>    	
-        </div>        
+                   <a href="Adminpanelview"><img src="resources/img/logo.png" class="img-responsive logo"/></a>    	
+        </div>    
+        	<div class="col-xs-2 header-logo">
+		  </div>
+		   <div class="col-xs-2 header-logo">
+		  </div>
+		   <div class="col-xs-2 header-logo">
+		  </div>
+		   <div class="col-xs-2 header-logo">
+		   <br><br><br>
+			<b class="glyphicon glyphicon-user"> ${sessionScope.user} </b>
+		  </div>
+		   <div class="col-xs-2 header-logo">
+		  
+		  </div>    
   </div>
    
   <nav class="navbar navbar-inverse" >
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="./index.jsp">Lootle.com admin panel</a>
+      <a class="navbar-brand" href="Adminpanelview">Lootle.com admin panel</a>
     </div>
       <div class="navbar-header">
 					     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -38,7 +51,7 @@
 		</div>
 		 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">	
     <ul class="nav navbar-nav">
-      <li><a href="index.jsp"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+      <li><a href="Adminpanelview"><span class="glyphicon glyphicon-home"></span> Home</a></li>
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Manage Orders <span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="Product"><span class="glyphicon glyphicon-shopping-cart"></span>Manage order</a></li>
@@ -64,8 +77,8 @@
           <li><a href="Product"><span class="glyphicon glyphicon-user"></span> Search Supplier</a></li>
         </ul>
       </li>
-      
-      <li><a href="ContactUs"><span class="glyphicon glyphicon-dashboard"></span> Dashboard</a></li>
+       <li><a href="perform_logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+  <!--   <li><a href="ContactUs"><span class="glyphicon glyphicon-dashboard"></span> Dashboard</a></li>  -->
       
      
     </ul>

@@ -3,17 +3,16 @@
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:beans="http://www.springframework.org/schema/beans"
 xmlns:context="http://www.springframework.org/schema/context"
 xmlns:tx="http://www.springframework.org/schema/tx"
-    xmlns:security="http://www.springframework.org/schema/security"
     xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
-        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
-        http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd">
+        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
+        
         
         <!--  -->
     <beans:bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
         <beans:property name="driverClassName" value="org.h2.Driver" />
-        <beans:property name="url" value="jdbc:h2:tcp://localhost/~/test" />
+        <beans:property name="url" value="jdbc:h2:tcp://localhost/~/mydb" />
         <beans:property name="username" value="sa" />
         <beans:property name="password" value="" />
     </beans:bean>
@@ -39,5 +38,5 @@ xmlns:tx="http://www.springframework.org/schema/tx"
 <beans:bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
      <beans:property name="sessionFactory" ref="sessionFactory" />
     </beans:bean>
-  
+ 
 </beans:beans>  

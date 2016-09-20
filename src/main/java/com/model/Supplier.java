@@ -1,5 +1,7 @@
 package com.model;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -8,8 +10,12 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "Suppliertbl")
-public class Supplier
+public class Supplier implements Serializable
 {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -89848841142295047L;
 	@Id
 	@Column(name = "SupplierId")
 	@GeneratedValue

@@ -39,7 +39,7 @@
 							<div class="col-xs-2">
 								<div class="form-group">
 									<br>
-									<input type="submit" value="Add" class="btn btn-info btn-block">
+									<input type="submit" value="Add" class="btn btn-success btn-block">
 								</div>
 							</div>
 					</div>
@@ -86,7 +86,7 @@
 							<div class="col-xs-2">
 								<div class="form-group">
 									<br>
-									<input type="submit" value="Update" class="btn btn-info btn-block">
+									<input type="submit" value="Update" class="btn btn-success btn-block">
 								</div>
 							</div>
 					</div>
@@ -123,7 +123,7 @@
 			</div>
 
 			<div class="table-responsive">
-				<table id="mytable" class="table table-bordred table-striped">
+				<table id="mytable" class="table table-bordred table-striped table-hover well">
 				<tr>
 					<th>Supplier Id</th>
 					<th>Supplier Name</th>
@@ -137,7 +137,7 @@
 						<td>{{sup.supplierName}}</td>
 						<td>{{sup.supplierContact}}</td>
 						<td>{{sup.supplierAdress}}</td>
-						<td><p data-placement="top" data-toggle="tooltip" title="Edit"><a data-title="Edit" class="btn btn-primary btn-xs" href="fetchsuppliertoupdate?supid={{sup.supplierId}}"> <span class="glyphicon glyphicon-pencil"></span></span></a></td>
+						<td><p data-placement="top" data-toggle="tooltip" title="Edit"><a data-title="Edit" class="btn btn-success btn-xs" href="fetchsuppliertoupdate?supid={{sup.supplierId}}"> <span class="glyphicon glyphicon-pencil"></span></span></a></td>
 						<td><p data-placement="top" data-toggle="tooltip" title="Delete"><a data-title="Edit" class="btn btn-danger btn-xs"	href="deletSupplier?supid={{sup.supplierId}}"> <span class="glyphicon glyphicon-trash"></span></a></td>
 					</tr>
 				</table>

@@ -23,10 +23,10 @@ public class CategoryController
 	@RequestMapping(value = "/Category", method = RequestMethod.GET)
 	public ModelAndView  showcategaory() 
 	{
-//		int lid=catDAO.fetchlastid();
-//		lid++;
+		int lid=catDAO.fetchlastid();
+		lid++;
 		Category catobj=new Category();
-	//	catobj.setCategoryId(lid);;
+		catobj.setCategoryId(lid);
 		String catgsonlist=catDAO.getCategory();
 		ModelAndView mvc=new ModelAndView("ManageCategory","Category",catobj);
 		mvc.addObject("clist",catgsonlist);
@@ -59,6 +59,7 @@ public class CategoryController
 	public ModelAndView fetchCategorytoupdate(@RequestParam("cid")int cid) 
 	{
 		Category Categoryobj=catDAO.fetchtotoupdate(cid);
+		
 		ModelAndView mvc =new ModelAndView("ManageCategory","Category",Categoryobj);
 		String catgsonlist=catDAO.getCategory();
 		mvc.addObject("clist",catgsonlist);
@@ -75,7 +76,7 @@ public class CategoryController
 		ModelAndView mvc=new ModelAndView("ManageCategory","Category",new Category());
 		String catgsonlist=catDAO.getCategory();
 		mvc.addObject("clist",catgsonlist);
-		mvc.addObject("check",true);
+		mvc.addObject("check",false);
 		return mvc;
 	}
 		
